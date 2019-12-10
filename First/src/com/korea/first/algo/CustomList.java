@@ -19,6 +19,23 @@ public class CustomList {
 		temp[oldLen] = val;
 		list = temp;
 	}
+		
+	
+	public void add(int index, String val) {
+		int oldLen = list.length;		
+		String[] temp = new String[oldLen + 1];		
+		
+		for(int i=0; i<oldLen+1; i++) {
+			if(i < index) {
+				temp[i] = list[i];				
+			}else if(i == index){
+				temp[i] = val;
+			}else {
+				temp[i] = list[i-1];
+			}
+		}
+		list = temp;
+	}
 	
 	public String get(int index) {
 		return list[index];

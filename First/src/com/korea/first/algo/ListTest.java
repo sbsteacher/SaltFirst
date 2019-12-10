@@ -12,6 +12,7 @@ public class ListTest {
 		list.add("b");
 		list.add("c");
 		list.add("d");
+		list.add(1, "가");
 		
 //		String val = list.get(2);
 //		System.out.println(val);
@@ -19,7 +20,7 @@ public class ListTest {
 //		list.removeLastOne();
 //		list.removeFirstOne();
 //		list.removeAll();
-		list.remove(4);
+//		list.remove(4);
 		
 		list.printList();
 
