@@ -18,7 +18,8 @@ public class ListTest {
 		
 //		list.removeLastOne();
 //		list.removeFirstOne();
-		list.removeAll();
+//		list.removeAll();
+		list.remove(4);
 		
 		list.printList();
 

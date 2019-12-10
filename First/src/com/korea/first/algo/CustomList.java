@@ -34,19 +34,6 @@ public class CustomList {
 		}
 		list = temp;
 	}
-	/*
-	public void removeLastOne() {
-		int oldLen = list.length;
-		if(oldLen > 0) {
-			String[] temp = new String[oldLen-1];		
-			
-			for(int i=0; i<oldLen-1; i++) {
-				temp[i]= list[i];
-			}
-			list = temp;
-		}
-	}
-	*/
 	
 	public void removeFirstOne() {
 		int oldLen = list.length; 
@@ -59,16 +46,29 @@ public class CustomList {
 		list = temp;
 	}
 	
-	/*
-	public void removeFirstOne() {
-		int oldLen = list.length;
-		String[] temp = new String[oldLen-1];
-		for(int i=0; i<oldLen-1; i++) {
-			temp[i]= list[i+1];
+	public void remove(int index) {
+		int oldLen = list.length; 
+		if(oldLen == 0) return;
+//		if(index == 0) {
+//			removeFirstOne();
+//			return;
+//		}
+//		if(index == list.length - 1) {
+//			removeLastOne();
+//			return;
+//		}
+		
+		String[] temp = new String[oldLen - 1];
+		for(int i=0; i<temp.length; i++) {
+			if(i < index) {
+				temp[i] = list[i];				
+			}else {
+				temp[i] = list[i+1];
+			}
 		}
 		list = temp;
 	}
-	*/
+	
 	public void removeAll() {
 		list = new String[0];
 	}
