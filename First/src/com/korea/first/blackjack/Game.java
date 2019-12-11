@@ -27,10 +27,10 @@ public class Game {
 			gamer.open();
 			System.out.print("카드를 더 받으시겠습니까? (싫으면 : n)");
 			answer = scan.next();
-			if(answer.equals("y")) {
-				gamer.saveCard(cd.pick());
-			} else {
+			if(answer.equals("n")) {
 				break;
+			} else {
+				gamer.saveCard(cd.pick());				
 			}
 		}
 		scan.close();
