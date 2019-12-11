@@ -31,10 +31,14 @@ public class Card {
 		}
 	}
 	
+	public int getScore() {
+		return score;
+	}
+
 	//스페이드 (1)
 	@Override
 	public String toString() {
-		return String.format("%s (%s)", shape, no);
+		return String.format("%s (%s) %d", shape, no, score);
 	}
 	
 }
