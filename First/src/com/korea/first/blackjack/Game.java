@@ -33,12 +33,7 @@ public class Game {
 				gamer.saveCard(cd.pick());				
 			}
 		}
-		scan.close();
-		
-		dealer.open();
-		System.out.println("------------------");
-		gamer.open();
-		
+		scan.close();		
+		Rule.whoIsWin(dealer, gamer);
 	}
-
 }
