@@ -20,13 +20,22 @@ public class Gamer {
 		}
 	}
 	
+	public int getSum() {
+		int sum = 0;
+		for(Card c : myCards) {
+			if(c != null) {
+				sum += c.getScore();
+			}
+		}
+		return sum;
+	}
+	
 	public void open() {
 		int sum = 0;
 		for(Card c : myCards) {
 			if(c != null) {
 				sum += c.getScore();
-				System.out.println(c);
-				
+				System.out.println(c);				
 			}
 		}
 		System.out.printf("합계 : %d\n", sum);
